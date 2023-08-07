@@ -57,6 +57,10 @@ class GridTable extends React.PureComponent {
     this.bodyRef && this.bodyRef.scrollToItem({ rowIndex, align });
   }
 
+  scrollToItem(rowIndex = 0, columnIndex = 0, align = 'auto') {
+    this.bodyRef && this.bodyRef.scrollToItem({ rowIndex, columnIndex, align });
+  }
+
   getTotalRowsHeight() {
     const { data, rowHeight, estimatedRowHeight } = this.props;
 
